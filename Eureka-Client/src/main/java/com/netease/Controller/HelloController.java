@@ -17,9 +17,22 @@ public class HelloController {
 	
 	@RequestMapping(value = "/hello" , method = RequestMethod.GET)
 	public String index() {
+		System.out.println("entering index() method");
 		ServiceInstance instance = client.getLocalServiceInstance();
 		System.out.println("/hello, host:" + instance.getHost() + ", serviceID:" + instance.getServiceId());
 		return "HelloWorld";
 	}
 
+	
+	
+	@RequestMapping(value = "/" , method = RequestMethod.GET)
+	public String home() {
+		System.out.println("entering home() method");
+		ServiceInstance instance = client.getLocalServiceInstance();
+		System.out.println("/, host:" + instance.getHost() + ", serviceID:" + instance.getServiceId());
+		return "Home";
+	}
+	
+	
+	
 }

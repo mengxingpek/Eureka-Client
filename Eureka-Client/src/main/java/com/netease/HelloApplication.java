@@ -1,4 +1,4 @@
-package com.netease.Eureka_Client;
+package com.netease;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
